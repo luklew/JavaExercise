@@ -1,2 +1,5 @@
 .metadata/
 JavaExercise/bin
+JavaExercise/.classpath
+JavaExercise/.project
+JavaExercise/.settings/org.eclipse.jdt.core.prefs
