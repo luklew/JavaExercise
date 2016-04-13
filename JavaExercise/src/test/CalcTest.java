@@ -34,10 +34,23 @@ public class CalcTest {
 	}
 
 	@Test
-	public void testCalcTotal() {
+	public void testCalcTotalNoOffer() {
+		
+		calc.setOfferAvailable(false);
 		
 		BigDecimal result = calc.calculateTotal();
 		BigDecimal expected = new BigDecimal(3.40).setScale(2, RoundingMode.HALF_UP);
+		
+		assertTrue(result.setScale(2, RoundingMode.HALF_UP).equals(expected));
+	}
+	
+	@Test
+	public void testCalcTotalWithOffer() {
+		
+		calc.setOfferAvailable(true);
+		
+		BigDecimal result = calc.calculateTotal();
+		BigDecimal expected = new BigDecimal(1.95).setScale(2, RoundingMode.HALF_UP);
 		
 		assertTrue(result.setScale(2, RoundingMode.HALF_UP).equals(expected));
 	}
