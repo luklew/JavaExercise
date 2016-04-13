@@ -37,10 +37,9 @@ public class CalcTest {
 	public void testCalcTotal() {
 		
 		BigDecimal result = calc.calculateTotal();
-		System.out.println(new BigDecimal(3.40).setScale(2, RoundingMode.HALF_UP));
 		BigDecimal expected = new BigDecimal(3.40).setScale(2, RoundingMode.HALF_UP);
 		
 		assertTrue(result.setScale(2, RoundingMode.HALF_UP).equals(expected));
 	}
-
+	
 }
